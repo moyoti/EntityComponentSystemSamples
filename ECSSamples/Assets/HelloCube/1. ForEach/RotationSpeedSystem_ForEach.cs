@@ -15,13 +15,13 @@ public class RotationSpeedSystem_ForEach : SystemBase
         
         // Schedule job to rotate around up vector
         Entities
-            .WithName("RotationSpeedSystem_ForEach")
+            .WithName("RotationSpeedSystem_ForEach")//好像没什么用
             .ForEach((ref Rotation rotation, in RotationSpeed_ForEach rotationSpeed) =>
             {
                 rotation.Value = math.mul(
                     math.normalize(rotation.Value), 
                     quaternion.AxisAngle(math.up(), rotationSpeed.RadiansPerSecond * deltaTime));
-            })
+            })//ForEach对Entity进行操作，lambda表达式中进行数据更新
             .ScheduleParallel();
     }
 }

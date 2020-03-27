@@ -5,7 +5,7 @@ using UnityEngine;
 // ReSharper disable once InconsistentNaming
 [RequiresEntityConversion]
 [AddComponentMenu("DOTS Samples/SpawnFromEntity/Spawner")]
-[ConverterVersion("joe", 1)]
+//[ConverterVersion("joe", 1)]
 public class SpawnerAuthoring_FromEntity : MonoBehaviour, IDeclareReferencedPrefabs, IConvertGameObjectToEntity
 {
     public GameObject Prefab;
